@@ -388,7 +388,10 @@ body {
     }
 }
 .titre {
+    font-family: Verdana;
+    color: saddlebrown;
     text-align: center;
+    font-size: 50px;
 }
 
 .engagements {
