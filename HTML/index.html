@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>URBAN Mood</title>
         <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../CSS/boutique.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 
@@ -118,70 +119,86 @@
 
     <h2>Meilleures ventes</h2>
 
-    <div class="vente">
-        <section>
-            <img src="../Images/Femme/pull12.jpg" alt="pull">
-            <h4 class="pacifico-regular">Pull sweater</h4>
-            <div class="infos" data-tooltip-id="tooltip1">...</div>
-        </section>
-        <div class="tooltip-global" id="tooltip1">
-            <strong>Description :</strong><br>
-            Pull en laine doux et confortable, parfait pour les journées fraîches.<br><br>
-            <strong>Tailles disponibles :</strong> S, M, L, XL<br><br>
-            <strong>Livraison :</strong> Disponible en 48h - 72h
-        </div>
+    <div class="article">
+        <section class="vueArticle">
+            <div class="like"></div>
 
-        <section>
-            <img src="../Images/Homme/accessoire5.jpg" alt="chaussure">
-            <h4>Pull sweater</h4><br>
-            <h4 class="pacifico-regular">20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-        </section>
+            <img src="../Images/Femme/pantalon8.jpg" alt="pantalon" class="photo">
+            <h4>Pantalon large bleu pastel</h4>
+            <h4>15.99€</h4>
 
-        <section>
-            <img src="../Images/Femme/pantalon2.jpg" alt="pantalon">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
+            <div class="options">
+                <label>Taille :</label>
+                <select class="select-taille">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
         </section>
 
-        <section>
-            <img src="../Images/Homme/accessoire6.jpg" alt="lunette">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-            <p> </p>
+
+        <section class="vueArticle">
+            <div class="like"></div>
+            <img src="../Images/Femme/accessoire1.jpg" alt="accessoire" class="photo">
+            <h4>Sac à main avec fleur crochetée</h4>
+            <h4>18.99€</h4>
+            <div class="options">
+                <label>Taille :</label>
+                <select class="select-taille">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+        </section>
+
+
+        <section class="vueArticle">
+            <div class="like"></div>
+
+            <img src="../Images/Homme/tshirt4.jpg" alt="tshirt" class="photo">
+            <h4>T-shirt orange</h4>
+            <h4>10.99€</h4>
+
+            <div class="options">
+                <label>Taille :</label>
+                <select class="select-taille">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+        </section>
+
+
+        <section class="vueArticle">
+            <div class="like"></div>
+
+            <img src="../Images/Femme/pull2.jpg" alt="pull" class="photo">
+            <h4>Gilet noir en maille épaisse</h4>
+            <h4>14.99€</h4>
+
+            <div class="options">
+                <label>Taille :</label>
+                <select class="select-taille">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
         </section>
     </div>
 
-    <h2>Nouveautés</h2>
-    <div class="nouveaute">
-        <section>
-            <img src="./Images/Homme/tshirt.jpg" alt="pantalon">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-        </section>
-        <section>
-            <img src="../Images/Femme/pantalon4.jpg" alt="pantalon">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-        </section>
-        <section>
-            <img src="../Images/Homme/sweat1.jpg" alt="sweat">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-        </section>
-        <section>
-            <img src="../Images/Femme/lunette1.jpg" alt="lunette">
-            <h4>Pull sweater</h4><br>
-            <h4>20€</h4>
-            <button value="ajouter">AJOUTER AU PANIER</button>
-        </section>
 
-    </div>
 
     <h2>Avis</h2>
     <div class="avis">
@@ -198,7 +215,7 @@
             <p>"Rapport qualité/prix très intéressant!"</p>
         </section>
     </div>
-    <button id="btn2" value="avis">VOIR TOUS LES AVIS</button>
+   
 
 
     <footer>
