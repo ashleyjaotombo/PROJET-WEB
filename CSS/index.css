@@ -406,16 +406,64 @@ body {
     text-align: center;
     font-size: 50px;
 }
-
 .engagements {
+    position: relative;
     padding: 60px 20px;
     text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    border: 2px solid rgba(190, 150, 105, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.engagements::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: linear-gradient(135deg,
+    rgba(190, 150, 105, 0.3) 0%,
+    rgba(244, 239, 234, 0.4) 50%,
+    rgba(190, 150, 105, 0.3) 100%);
+    filter: blur(20px);
+    z-index: -1;
+    border-radius: 35px;
+    max-width: calc(100% + 60px);
+    margin: 0 auto;
+}
+
+.engagements::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: radial-gradient(ellipse at center,
+    rgba(190, 150, 105, 0.2) 0%,
+    rgba(190, 150, 105, 0.1) 50%,
+    transparent 70%);
+    z-index: -2;
+    border-radius: 30px;
+    pointer-events: none;
+}
+
+.engagements > * {
+    position: relative;
+    z-index: 1;
 }
 
 .engagements h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     color: #333;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    font-weight: bold;
 }
 
 .engagements-grid {
@@ -427,15 +475,19 @@ body {
 }
 
 .engagement {
-    background: white;
+    background: rgba(244, 239, 234, 0.7);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(190, 150, 105, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .engagement:hover {
-    transform: translateY(-5px);
+    background: rgba(244, 239, 234, 0.8);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .engagement .emoji {
