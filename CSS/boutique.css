@@ -236,7 +236,7 @@ body {
 }
 
 .ajouter-panier {
-    background-color: #2ecc71;
+    background-color: tan;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -248,5 +248,5 @@ body {
 }
 
 .ajouter-panier:hover {
-    background-color: #27ae60;
+    background-color: goldenrod;
 }
