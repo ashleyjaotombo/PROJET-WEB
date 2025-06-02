@@ -2,13 +2,10 @@ const likes = document.querySelectorAll(".like");
 
 likes.forEach((like, index) => {
     const section = like.closest("section");
-
-
     const img = section.querySelector("img");
     const id = img.getAttribute("src");
 
-
-    if (localStorage.getItem(id)) {
+    if (localStorage.getItem("favori-" + id)) {
         like.classList.add("likeAppuyer");
     }
 
@@ -16,29 +13,23 @@ likes.forEach((like, index) => {
         like.classList.toggle("likeAppuyer");
 
         if (like.classList.contains("likeAppuyer")) {
-            localStorage.setItem(id, section.outerHTML);
+            localStorage.setItem("favori-" + id, section.outerHTML);
         } else {
-            localStorage.removeItem(id);
+            localStorage.removeItem("favori-" + id);
         }
     });
-})
+});
 
-
-//------------------------------------------------------------------------------------------------
 const articlesContainers = document.querySelectorAll(".articlefavoris");
-
-// Récupérer tous les favoris.css stockés
-const savedItems = Object.values(localStorage);
-
+const savedItems = Object.entries(localStorage).filter(([key, value]) => key.startsWith("favori-"));
 
 let currentContainerIndex = 0;
 let countInCurrent = 0;
 
-savedItems.forEach(html => {
+savedItems.forEach(([key, html]) => {
+    if (!html.includes("likeAppuyer")) return;
     const section = document.createElement("section");
     section.innerHTML = html;
-
-
     const clean = section.querySelector("section");
     const finalSection = clean ? clean : section;
 
@@ -54,29 +45,22 @@ savedItems.forEach(html => {
     }
 });
 
-//---------------------------------------------------------------------------------------
+const articleLike = document.querySelectorAll(".likeAppuyer");
 
-
-const articleLike=document.querySelectorAll(".likeAppuyer");
-
-articleLike.forEach((article)=>{
-    const section=article.closest("section");
-    const img=section.querySelector("img");
-    const id=img.getAttribute("src");
-    article.addEventListener("click", ()=>{
-        section.style.transition="transform 0.6s ease";
-        section.style.transform="translateX(-1000px)";
-        localStorage.removeItem(id);
+articleLike.forEach((article) => {
+    const section = article.closest("section");
+    const img = section.querySelector("img");
+    const id = img.getAttribute("src");
+    article.addEventListener("click", () => {
+        section.style.transition = "transform 0.6s ease";
+        section.style.transform = "translateX(-1000px)";
+        localStorage.removeItem("favori-" + id);
         article.classList.remove("likeAppuyer");
         setTimeout(() => {
             location.reload();
         }, 500);
     });
 });
-
-
-
-//------------------------------------------------------------------------------------
 
 const boutonsPanier = document.querySelectorAll(".ajouter-panier");
 
@@ -88,98 +72,62 @@ boutonsPanier.forEach((bouton) => {
         const description = elements[0].textContent;
         const prix = elements[1].textContent;
 
-        const html = `
-        <section class="articlePanier">
-            <ul>
-                <li><img class="photo-panier" src="${img}" /></li>
-                <li>
-                    <h4>${description}</h4>
-                    <h4>${prix}</h4>
-                    <h4>Taille : M</h4>
-                </li>
-            </ul>
-            <button class="supprimerPanier">Supprimer</button>
-        </section>`;
+        const article = {
+            identifiant: "panier-article",
+            html: `
+                <section class=\"articlePanier\">
+                    <ul>
+                        <li><img class=\"photo-panier\" src=\"${img}\" /></li>
+                        <li>
+                            <h4>${description}</h4>
+                            <h4>${prix}</h4>
+                            <h4>Taille : M</h4>
+                        </li>
+                    </ul>
+                    <button class=\"supprimerPanier\">Supprimer</button>
+                </section>`
+        };
 
         let panier = JSON.parse(localStorage.getItem("monPanierHTML")) || [];
-        panier.push(html);
+        panier.push(article);
         localStorage.setItem("monPanierHTML", JSON.stringify(panier));
-
+        location.reload();
     });
 });
-
-
-//-------------------------------------------------------------------
-
 
 const panierContainer = document.querySelector(".article-via-panier");
 const donnees = localStorage.getItem("monPanierHTML");
 
-if (!donnees) {
-    panierContainer.innerHTML = "<p>Votre panier est vide.</p>";
-} else {
-    const articles = JSON.parse(donnees);
-    if (articles.length === 0) {
-        panierContainer.innerHTML = "<p>Votre panier est vide.</p>";
+if (panierContainer) {
+    panierContainer.innerHTML = "";
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("bloc-panier");
+    if (!donnees) {
+        wrapper.innerHTML = "<p>Votre panier est vide.</p>";
     } else {
-        articles.forEach((html, index) => {
-            const affichage = document.createElement("div");
-            affichage.innerHTML = html;
-
-            const section = affichage.querySelector("section");
-            if (section) {
-                panierContainer.appendChild(section);
-            }
-        });
-
-        document.querySelectorAll(".supprimerPanier").forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                const articles = JSON.parse(localStorage.getItem("monPanierHTML")) || [];
-                articles.splice(i, 1);
-                localStorage.setItem("monPanierHTML", JSON.stringify(articles));
-                location.reload();
+        const articles = JSON.parse(donnees).filter(a => a.identifiant === "panier-article");
+        if (articles.length === 0) {
+            wrapper.innerHTML = "<p>Votre panier est vide.</p>";
+        } else {
+            articles.forEach((obj, index) => {
+                const affichage = document.createElement("div");
+                affichage.innerHTML = obj.html;
+                const section = affichage.querySelector("section.articlePanier");
+                if (section) {
+                    wrapper.appendChild(section);
+                }
             });
-        });
+
+            document.querySelectorAll(".supprimerPanier").forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    const articles = JSON.parse(localStorage.getItem("monPanierHTML")) || [];
+                    const filtrés = articles.filter(a => a.identifiant === "panier-article");
+                    filtrés.splice(i, 1);
+                    localStorage.setItem("monPanierHTML", JSON.stringify(filtrés));
+                    location.reload();
+                });
+            });
+        }
     }
-
-    
+    panierContainer.appendChild(wrapper);
 }
-
-
-
-
-//------------------------------------------------------------------------------------
-
-
-const recherche=document.getElementById("panneauRecherche");
-const fermeButton=document.getElementById("closeRecherche");
-const entreRecherche=document.getElementById("saisieRecherche");
-const lancerRecherche=document.getElementById("ouvrirRecherche");
-
-lancerRecherche.addEventListener("click", ()=>{
-    recherche.classList.add("panneauOuvert");
-});
-
-fermeButton.addEventListener("click", ()=>{
-    recherche.classList.remove("panneauOuvert");
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
