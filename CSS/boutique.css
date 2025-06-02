@@ -1,0 +1,252 @@
+.genre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre section {
+    padding: 20px;
+    background-color: peachpuff;
+    margin: 20px;
+    border:3px solid goldenrod ;
+    border-radius: 10%;
+
+}
+
+.genre a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.genre img{
+    height:560px;
+    width: 360px;
+    padding: 40px;
+    border-radius: 10%;
+}
+
+.listeVetement ul{
+    display: flex;
+    padding:0;
+
+}
+
+.listeVetement li{
+    list-style: none;
+    border : 1px solid black;
+    margin: 9px;
+    padding: 2px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+
+.listeVetement a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.listeVetement a:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    transform: scale(1.05);
+}
+
+
+.vueArticle {
+    width: 22%;
+    height: 650px;
+    min-width: 300px;
+    box-sizing: border-box;
+    margin: 30px 20px;
+    text-align: center;
+    background-color: #f4f0eb;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vueArticle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px grey;
+}
+
+
+body {
+    background-image: url("../Images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.article{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+
+
+.article a{
+    text-decoration: none;
+    color:black;
+}
+
+.article img {
+    width: 92%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-top: 10px;
+}
+
+.article h4 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    padding: 0;
+}
+
+
+.like {
+    width: 15px;
+    height: 15px;
+    background-color: #aaa;
+    position: absolute;
+    transform: rotate(-45deg) translate(173px,199px);
+
+}
+
+.like::before,
+.like::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #aaa;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.like::before {
+    top: -7.5px;
+    left: 0;
+}
+
+.like::after {
+    top: 0;
+    left: 7.5px;
+}
+
+.like:hover,
+.like:hover::before,
+.like:hover::after {
+    background-color: crimson;
+}
+
+
+.likeAppuyer {
+    width: 15px;
+    height: 15px;
+    background-color: crimson;
+    position: absolute;
+    transform: rotate(-45deg) translate(173px,199px);
+}
+
+.likeAppuyer::before,
+.likeAppuyer::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: crimson;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.likeAppuyer::before {
+    top: -7.5px;
+    left: 0;
+}
+
+.likeAppuyer::after {
+    top: 0;
+    left: 7.5px;
+}
+
+.articles{
+    display:flex;
+    margin-bottom: 15px;
+}
+.articles section{
+    justify-content: space-between;
+    border:0.1px solid black;
+    position: relative;
+}
+
+.articles a{
+    text-decoration: none;
+    color:black;
+}
+
+.articles h4{
+    margin-left:9px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.articles img{
+    width:350px;
+    height:400px;
+
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 92%;
+    margin-left: 3.5%;
+}
+
+.options label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.select-taille {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ajouter-panier {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.ajouter-panier:hover {
+    background-color: #27ae60;
+}
