@@ -3,11 +3,11 @@ const likes = document.querySelectorAll(".like");
 likes.forEach((like, index) => {
     const section = like.closest("section");
 
-    // Identifiant unique basé sur l'image
+
     const img = section.querySelector("img");
     const id = img.getAttribute("src");
 
-    // Charger l'état depuis localStorage
+
     if (localStorage.getItem(id)) {
         like.classList.add("likeAppuyer");
     }
@@ -26,9 +26,9 @@ likes.forEach((like, index) => {
 
 
 //------------------------------------------------------------------------------------------------
-const articlesContainers = document.querySelectorAll(".articles");
+const articlesContainers = document.querySelectorAll(".articlefavoris");
 
-// Récupérer tous les favoris stockés
+// Récupérer tous les favoris.css stockés
 const savedItems = Object.values(localStorage);
 
 // Insérer les articles dans les blocs .articles (4 max chacun)
@@ -39,7 +39,7 @@ savedItems.forEach(html => {
     const section = document.createElement("section");
     section.innerHTML = html;
 
-    // Sauter les balises imbriquées <section> dans <section>
+    // On saute les balises imbriquées <section> dans <section>
     const clean = section.querySelector("section");
     const finalSection = clean ? clean : section;
 
@@ -92,7 +92,8 @@ fermeButton.addEventListener("click", ()=>{
 });
 
 
-    document.querySelectorAll('.infos').forEach(infos => {
+
+document.querySelectorAll('.infos').forEach(infos => {
     const tooltipId = infos.dataset.tooltipId;
     const tooltip = document.getElementById(tooltipId);
 
