@@ -1,151 +1,231 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>URBAN Mood</title>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-</head>
-<body>
-<header>
-    <nav>
-        <img class="logo" src="../Images/logo.jpg" alt="logo">
-        <ul class="navbar">
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./boutique.html">Boutique</a></li>
-            <li><a href="./Favoris.html">Favoris</a></li>
-            <li><a href="">Contact</a></li>
-            <li><img src="../Images/recherche.png" alt="Recherche" id="ouvrirRecherche"></li>
-            <li><a href=""><img src="../Images/compte.png"></a></li>
-            <li><a href=""><img src="../Images/panier.png"></a></li>
-        </ul>
-    </nav>
-</header>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>URBAN Mood</title>
+        <link rel="stylesheet" href="../CSS/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 
-<div id="panneauRecherche">
-    <button id="closeRecherche">×</button>
-    <h2>Recherche</h2>
-    <input type="text" placeholder="Que recherchez-vous" id="saisieRecherche">
-</div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 
-
-
-<section class="plan">
-    <img class="accueilIMG" src="../Images/accueil.jpg" alt="Image d'accueil">
-
-    <div class="promo">
-        <h4>VENTE PROMOTIONNELLE</h4>
-        <h3>Jusqu'à 50% de réduction</h3>
-        <input id="btn1" type="button" value="ACHETER MAINTENANT">
-    </div>
-</section><br>
-
-<h2>Meilleures ventes</h2>
-
-<div class="vente">
-    <section>
-        <img src="../Images/Femme/pull12.jpg" alt="pull">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-
-    <section>
-        <img src="../Images/Homme/accessoire5.jpg" alt="chaussure">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-
-    <section>
-        <img src="../Images/Femme/pantalon2.jpg" alt="pantalon">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-
-    <section>
-        <img src="../Images/Homme/accessoire6.jpg" alt="lunette">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-</div>
-
-<h2>Nouveautés</h2>
-<div class="nouveaute">
-    <section>
-        <img src="./Images/Homme/tshirt.jpg" alt="pantalon">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-    <section>
-        <img src="../Images/Femme/pantalon4.jpg" alt="pantalon">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-    <section>
-        <img src="../Images/Homme/sweat1.jpg" alt="sweat">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-    <section>
-        <img src="../Images/Femme/lunette1.jpg" alt="lunette">
-        <h4>Pull sweater</h4><br>
-        <h4>20€</h4>
-        <button value="ajouter">AJOUTER AU PANIER</button>
-    </section>
-
-</div>
-
-<h2>Avis</h2>
-<div class="avis">
-    <section>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Livraison rapide, produit de grande qualité. Très satisfait de mon achat !"</p>
-    </section>
-    <section>
-        <p>⭐⭐⭐⭐</p>
-        <p>"Je recommande vivement cette marque pour l'été."</p>
-    </section>
-    <section>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Rapport qualité/prix très intéressant!"</p>
-    </section>
-</div>
-<button id="btn2" value="avis">VOIR TOUS LES AVIS</button>
-
-
-<footer>
-    <div>
-        <form>
-            <fieldset>
-                <legend>RESTEZ CONNECTE</legend>
-                <h4>Abonnez-vous à notre newsletter</h4>
-                <input type="text" placeholder="Adresse mail">
-                <button id="btn3" type="button" value="envoyer">Envoyer</button>
-            </fieldset>
-        </form>
+    </head>
+    <body>
+    <header>
         <nav>
-            <ul class="footer">
-                <li><a href="">A propos</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Notre histoire</a></li>
-                <li><a href="">Effectuer un retour</a></li>
+            <img class="logo" src="../Images/logo.png" alt="logo">
+            <ul class="navbar">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./boutique.html">Boutique</a></li>
+                <li><a href="./Favoris.html">Favoris</a></li>
+                <li><a href="apropos.html">A propos</a></li>
+
+                <li><a href="Contact.html">Contact</a></li>
+                <li><img src="../Images/recherche.png" alt="Recherche" id="ouvrirRecherche"></li>
+                <li><a href=""><img src="../Images/compte.png"></a></li>
+                <li><a href=""><img src="../Images/panier.png"></a></li>
             </ul>
         </nav>
+    </header>
+
+
+
+
+
+
+    <div id="panneauRecherche">
+        <button id="closeRecherche">×</button>
+        <h2>Recherche</h2>
+        <input type="text" placeholder="Que recherchez-vous" id="saisieRecherche">
     </div>
-</footer>
+
+
+    <h2 class=" titre">La production</h2>
+    <div class="timeline">
+        <div class="step">
+            <h3>Étape 1 : Récolte</h3>
+            <p>Cueillir le raphia, matière première naturelle.</p>
+        </div>
+        <div class="step">
+            <h3>Étape 2 : Traitement</h3>
+            <p>Nettoyage et préparation des fibres pour la confection.</p>
+        </div>
+        <div class="step">
+            <h3>Étape 3 : Envoi aux artisans</h3>
+            <p>Transport vers nos ateliers partenaires.</p>
+        </div>
+        <div class="step">
+            <h3>Étape 4 : Livraison</h3>
+            <p>Confection terminée, vos vêtements sont expédiés !</p>
+        </div>
+    </div>
+
+
+
+    <section class="engagements">
+        <h2>Nos engagements</h2>
+        <div class="engagements-grid">
+            <div class="engagement">
+                <span class="emoji">🌿</span>
+                <h3>100 % fibres naturelles</h3>
+                <p>Raphia, coton bio et autres matières respectueuses de la nature.</p>
+            </div>
+            <div class="engagement">
+                <span class="emoji">🤲</span>
+                <h3>Fabrication artisanale locale</h3>
+                <p>Chaque pièce est confectionnée à la main avec soin et savoir-faire.</p>
+            </div>
+            <div class="engagement">
+                <span class="emoji">♻️</span>
+                <h3>Zéro plastique</h3>
+                <p>Emballages éco-conçus et aucun plastique à usage unique.</p>
+            </div>
+            <div class="engagement">
+                <span class="emoji">🌍</span>
+                <h3>Impact positif</h3>
+                <p>Engagés pour un avenir plus durable et plus solidaire.</p>
+            </div>
+
+
+            <div class="engagement">
+                <span class="emoji">🌞</span>
+                <h3>Énergie responsable</h3>
+                <p>Utilisation d’énergies renouvelables dans notre processus de production.</p>
+            </div>
+            <div class="engagement">
+                <span class="emoji">📦</span>
+                <h3>Livraison responsable</h3>
+                <p>Expédition neutre en carbone et partenaires logistiques engagés.</p>
+            </div>
+        </div>
+
+
+    </section>
 
 
 
 
 
-<script src="../index.js"></script>
-</body>
-</html>
+    </section><br>
+
+
+    <div>
+
+
+    </div>
+
+    <h2>Meilleures ventes</h2>
+
+    <div class="vente">
+        <section>
+            <img src="../Images/Femme/pull12.jpg" alt="pull">
+            <h4 class="pacifico-regular">Pull sweater</h4>
+            <div class="infos" data-tooltip-id="tooltip1">...</div>
+        </section>
+        <div class="tooltip-global" id="tooltip1">
+            <strong>Description :</strong><br>
+            Pull en laine doux et confortable, parfait pour les journées fraîches.<br><br>
+            <strong>Tailles disponibles :</strong> S, M, L, XL<br><br>
+            <strong>Livraison :</strong> Disponible en 48h - 72h
+        </div>
+
+        <section>
+            <img src="../Images/Homme/accessoire5.jpg" alt="chaussure">
+            <h4>Pull sweater</h4><br>
+            <h4 class="pacifico-regular">20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+
+        <section>
+            <img src="../Images/Femme/pantalon2.jpg" alt="pantalon">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+
+        <section>
+            <img src="../Images/Homme/accessoire6.jpg" alt="lunette">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+            <p> </p>
+        </section>
+    </div>
+
+    <h2>Nouveautés</h2>
+    <div class="nouveaute">
+        <section>
+            <img src="./Images/Homme/tshirt.jpg" alt="pantalon">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+        <section>
+            <img src="../Images/Femme/pantalon4.jpg" alt="pantalon">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+        <section>
+            <img src="../Images/Homme/sweat1.jpg" alt="sweat">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+        <section>
+            <img src="../Images/Femme/lunette1.jpg" alt="lunette">
+            <h4>Pull sweater</h4><br>
+            <h4>20€</h4>
+            <button value="ajouter">AJOUTER AU PANIER</button>
+        </section>
+
+    </div>
+
+    <h2>Avis</h2>
+    <div class="avis">
+        <section>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"Livraison rapide, produit de grande qualité. Très satisfait de mon achat !"</p>
+        </section>
+        <section>
+            <p>⭐⭐⭐⭐</p>
+            <p>"Je recommande vivement cette marque pour l'été."</p>
+        </section>
+        <section>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"Rapport qualité/prix très intéressant!"</p>
+        </section>
+    </div>
+    <button id="btn2" value="avis">VOIR TOUS LES AVIS</button>
+
+
+    <footer>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>RESTEZ CONNECTE</legend>
+                    <h4>Abonnez-vous à notre newsletter</h4>
+                    <input type="text" placeholder="Adresse mail">
+                    <button id="btn3" type="button" value="envoyer">Envoyer</button>
+                </fieldset>
+            </form>
+            <nav>
+                <ul class="footer">
+                    <li><a href="">A propos</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Notre histoire</a></li>
+                    <li><a href="">Effectuer un retour</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+
+
+    <script src="../index.js"></script>
+    </body>
+    </html>

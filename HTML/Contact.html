@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URBAN Mood</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/Contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<header>
+    <nav>
+        <img class="logo" src="../Images/logo.png" alt="logo">
+        <ul class="navbar">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./boutique.html">Boutique</a></li>
+            <li><a href="./Favoris.html">Favoris</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+
+            <li><a href="Contact.html">Contact</a></li>
+            <li><img src="../Images/recherche.png" alt="Recherche" id="ouvrirRecherche"></li>
+            <li><a href=""><img src="../Images/compte.png"></a></li>
+            <li><a href=""><img src="../Images/panier.png"></a></li>
+        </ul>
+    </nav>
+    </header>
+<form class="formulaire">
+    <h2>Contactez-nous</h2>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Type de produit</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="image">Photo de vos habilles</label>
+    <input type="file" id="image" name="image" accept="image/*">
+
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
