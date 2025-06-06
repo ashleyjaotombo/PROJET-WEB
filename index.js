@@ -106,9 +106,7 @@ if (panierContainer) {
         wrapper.innerHTML = "<p>Votre panier est vide.</p>";
     } else {
         const articles = JSON.parse(donnees).filter(a => a.identifiant === "panier-article");
-        if (articles.length === 0) {
-            wrapper.innerHTML = "<p>Votre panier est vide.</p>";
-        } else {
+        if (articles.length !== 0) {
             articles.forEach((obj, index) => {
                 const affichage = document.createElement("div");
                 affichage.innerHTML = obj.html;
